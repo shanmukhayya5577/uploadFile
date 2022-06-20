@@ -1,0 +1,67 @@
+<p>Working</p>
+<div class="main">
+
+  <div>
+    <input type="file" id="input" class="btn btn-primary" (change)="excelRead($event)">&nbsp;&nbsp; 
+    <button  id="button" class="btn btn-success" (click)="excel()" >Download Ecxel</button>&nbsp;&nbsp;
+    <button id="button" class="btn btn-danger" (click)="makePdf()">Download PDF</button>
+    <!-- (click)="makePdf()" -->
+  </div><br>
+
+  <div class="">
+    <div>
+      <table class="table" id="content" #content>
+        <thead class="theadfa-pull-right bg-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">email</th>
+            <th scope="col">Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of listData">
+            <!-- <td>{{index1+1}}</td> -->
+            <td>{{i.ID}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.LastName}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.PhoneNumber}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- <div class="form">
+<form [formGroup]="uploadForm">
+  <div class="form-group">
+    <label for="exampleInputEmail1">ID:</label>
+    <input type="email" required class="id" id="id" aria-describedby="emailHelp" formControlName="id"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Name</label>
+    <input type="password" class="name" id="name" required formControlName="name"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name</label>
+    <input type="password" class="lname" id="lname" required formControlName="lname"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">email</label>
+    <input type="password" class="email" id="email" required formControlName="email"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Phone Number</label>
+    <input type="password" class="pnumber" id="pnumber" required formControlName="pnumber"><br>
+  </div>
+
+</form>
+
+  </div> -->
